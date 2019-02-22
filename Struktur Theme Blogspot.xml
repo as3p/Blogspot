@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+
+<html>
+	<head>
+			<!-- Meta tag berfungsi sebagai sarana komunikasi pengelola blog untuk menginformasikan sesuatu kepada mesin pencari -->
+			<b:include data='blog' name='all-head-content'/>
+			
+			<!-- Judul Blog -->
+			<title><data:blog.pageTitle/></title>
+		   
+		   <!-- CSS -->
+			<b:skin><![CDATA[
+			
+			/*=====================================
+			  Panduan :
+			  Selektor
+			  Selektor adalah kata kunci untuk memilih elemen HTML yang akan kita atur.
+			  
+			  /* Selektor dengan nama tag */
+				h2 {
+					color: blue
+				}
+
+				/* Selektor dengan class */
+				.bg-yellow {
+					backgound-color: yellow;
+				}
+
+				/* selektor dengan ID elemen */
+				#header {
+					background: grey;
+				}
+
+				/* Selektor dengan Atribut */
+				input[type=text]{
+					background: yellow;
+				}
+			  =====================================*/
+			  
+			  
+			
+			/*=====================================
+			  = 1.Global
+			  =====================================*/
+			body {
+					background:url(http://lh3.ggpht.com/_Kwwy9VyLMKw/TKoWVJt0cFI/AAAAAAAADbw/5XNGozl8tGg/bk_body.jpg) repeat scroll 0 0 transparent;
+					font-weight:normal;
+					font-family:Arial, Helvetica, sans-serif;
+					font-size:13px;
+					color:#777777;
+					line-height:135%;
+				}
+			
+			.clearfix:after {
+					content:".";
+					display:block;
+					height:0;
+					clear:both;
+					visibility:hidden;
+					overflow:hidden;
+					float:none;
+				}
+				
+			/*=====================================
+			  = 2.Wrapper
+			  =====================================*/	
+			#wrapper {
+					background:url(http://lh6.ggpht.com/_Kwwy9VyLMKw/TKoV0bfieBI/AAAAAAAADbo/TD0otAlNeQU/bk_content.jpg);
+					margin:10px;
+					overflow:hidden;
+					padding:27px;
+					width:906px;
+				}
+				
+		    /*=====================================
+		   	  = 3.Header-Wrapper
+			  =====================================*/	
+			#header-wrapper {
+					background:url(http://wordpress.site5.net/simploblack/wp-content/themes/simplo/images/bk_header.png) no-repeat scroll 50% 0 transparent;
+					background:url(http://lh6.ggpht.com/_Kwwy9VyLMKw/TKoUODYTxrI/AAAAAAAADbM/CyTB2dV26LE/bk_dotted_horiz.png) repeat-x scroll 0 100% transparent;
+					height:100px;
+					margin-bottom:13px;
+					margin-top:10px;
+					padding-top:30px;
+				}
+			#header {
+					float:left;
+				}
+			/*=====================================
+			  = 4.Content-Wrapper
+			  =====================================*/
+			#content-wrapper {
+					margin-top:30px;
+					overflow:hidden;
+					padding-top:10px;
+					background:url(http://lh4.ggpht.com/_Kwwy9VyLMKw/TG7XQPNNSBI/AAAAAAAADUE/trCgItPf2lE/bk_dotted_vert.png) repeat-y scroll 625px 0 transparent;
+				}
+			/*=====================================
+		      = 5.Sidebar-Wrapper
+			  =====================================*/
+			#sidebar-wrapper {
+					float:left;
+					padding-left:25px;
+					width:255px;
+				}				
+			/*=====================================
+			  = 7.Footer-Wrapper
+			  =====================================*/
+			#footer-wrapper {background:transparent; width:100%; border:1px solid #eaeaea; margin:10px 0;}
+			]]></b:skin>			
+	</head>
+	
+	<!-- Elemen Utama Template Blog -->
+	
+	<!-- 
+	1.Body
+	Body atau tubuh merupakan bagian dari HTML yang bertanggung jawab untuk menampilkan elemen-elemen blog. 
+	Semua elemen blog harus berada di dalam body agar dapat ditampilkan.
+	-->
+	<body>
+	
+		<!-- 
+	    2.Wrapper
+		Wrapper atau sering disebut juga sebagai outer-wrapper merupakan wadah pembungkus terluar elemen-elemen blog setelah body
+		-->
+		<div id='wrapper'>
+			<!--
+			3.Header-Wrapper
+			Header-wrapper merupakan bagian yang bertanggung jawab terhadap tampilan header blog. 
+			Header-wrapper menempati bagian paling atas sebuah blog. Biasanya berisi informasi judul dan deskripsi blog.
+			-->
+			<header id='header-wrapper'>
+				<b:section class='header' id='header' maxwidgets='1'>
+					<b:widget id='Header1' locked='true' title='Ganteng id (Header)' type='Header'></b:widget>
+				</b:section>
+			</header>
+			
+			<div class='clearfix'/>
+			<!-- 
+			4.Content-Wrapper
+			Content-wrapper adalah bagian yang mengatur tampilan posting. 
+			Posisinya biasanya berada di tengah dan berfungsi sebagai tempat konten atau isi blog.
+			-->
+			<aside id='content-wrapper'>
+				<b:section class='main' id='main'>
+					<b:widget id='Blog1' locked='true' title='Posting Blog' type='Blog'></b:widget>
+				</b:section>
+			</aside>
+			
+			<!--
+			5.Sidebar-Wrapper
+			Sidebar-wrapper adalah bagian yang mengatur tampilan sidebar. 
+			Letaknya biasanya berdampingan dengan content-wrapper karena bertindak sebagai pendukung. 
+			Sidebar-wrapper biasanya berisi widget atau gadget, informasi penulis, kolom pencarian, dan sebagai tempat iklan.
+			-->
+			<aside id='sidebar-wrapper'>
+				<b:section class='sidebar' id='sidebar' showaddelement='yes'></b:section>
+			</aside>
+			
+
+			<div class='clearfix'/>
+			<!--
+			6.Footer-Wrapper
+			Footer-wrapper merupakan bagian yang bertanggung jawab mengatur tampilan footer blog. 
+			Footer-wrapper menempati bagian paling bawah sebuah blog. 
+			Biasanya footer-wrapper dimanfaatkan oleh pengelola blog sebagai tempat untuk menginformasikan kontak pengelola blog atau sebagai tempat memasang iklan
+			-->
+			<footer id='footer-wrapper'>
+				<b:section class='footer' id='footer' showaddelement='yes'></b:section>
+			</footer>
+		</div>
+		<!-- Javascript -->
+	</body>
+</HTML>
